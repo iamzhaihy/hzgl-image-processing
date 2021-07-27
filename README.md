@@ -8,7 +8,7 @@ Hongyu ZHAI ([Github](https://github.com/iamzhaihy), [LinkedIn](https://www.link
 
 To me, GPU-accelerated image processing is very interesting. The boilerplate code, on the other hand, is no fun to write. To enable faster development, I wrote myself a small toolkit and used it to make this image processing testbench. It is easy to switch between images, effects, and convolution kernels. 
 
-This is the sibling project of https://github.com/iamzhaihy/hzgl-obj-viewer.
+This is the sibling project of https://github.com/iamzhaihy/hzgl-mesh-viewer.
 
 ## Compile and Run
 
@@ -21,7 +21,7 @@ Before you start, make sure you have the following things:
 To run the program yourself, type the following commands
 
 ```bash
-git clone --recursive https://github.com/iamzhaihy/hzgl-obj-viewer.git
+git clone --recursive https://github.com/iamzhaihy/hzgl-image-processing.git
 cd hzgl-obj-viewer
 mkdir build && cd build
 cmake ..
