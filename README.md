@@ -4,11 +4,13 @@ Hongyu ZHAI ([Github](https://github.com/iamzhaihy), [LinkedIn](https://www.link
 
 ![Main UI](./results/main-ui.png)
 
+
 ## About this Project
 
 To me, GPU-accelerated image processing is very interesting. The boilerplate code, on the other hand, is no fun to write. To enable faster development, I wrote myself a small toolkit and used it to make this image processing testbench. It is easy to switch between images, effects, and convolution kernels. 
 
 This is the sibling project of https://github.com/iamzhaihy/hzgl-mesh-viewer.
+
 
 ## Compile and Run
 
@@ -22,13 +24,14 @@ To run the program yourself, type the following commands
 
 ```bash
 git clone --recursive https://github.com/iamzhaihy/hzgl-image-processing.git
-cd hzgl-obj-viewer
+cd hzgl-image-processing
 mkdir build && cd build
 cmake ..
 cmake --build .
 ```
 
-The external libraries are all compiled statically, which means it should work out of the box if you have the things above.
+The external libraries are all linked statically, which means it should work out of the box if you have the things above.
+
 
 ## Basic Controls
 
@@ -44,13 +47,14 @@ Several keyboard shortcuts are provided:
 - Press `Q` or `Escape` to quit the program
 - Press `F` or `PrintScreen` to take a screenshot (will be stored in the same directory as the executable)
 
+
 ## Implemented Filters
 
 **Passthrough (identity)**
 
 ![identity](./results/flower-passthrough.png)
 
-**Greyscale **
+**Greyscale**
 
 ![greyscale](./results/flower-greyscale.png)
 
@@ -103,3 +107,13 @@ Here is my plan for the future improvement
   - Load image file from a dropdown file menu
   - Allow the user to apply multiple effect at the same time
   - Add a simple editor that recompiles shaders after the user saves changes
+
+
+## References
+Below are the sources I referred to when developing:
+
+- Machine Vision (R. Jian, R. Kasturi and B. G. Schunck)
+- https://docs.gimp.org/2.10/en/gimp-filter-convolution-matrix.html
+- https://webglfundamentals.org/webgl/lessons/webgl-image-processing.html
+- https://www.objc.io/issues/21-camera-and-photos/gpu-accelerated-image-processing/
+- https://www.objc.io/issues/21-camera-and-photos/gpu-accelerated-machine-vision/
