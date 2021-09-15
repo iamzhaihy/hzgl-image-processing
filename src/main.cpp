@@ -210,20 +210,17 @@ static void display(void)
 
     glUseProgram(program);
 
-    glActiveTexture(GL_TEXTURE0);
-    glBindTexture(GL_TEXTURE_2D, texture);
-
-    glUniform1i(glGetUniformLocation(program, "uTexture"), 0);
-    glUniform2f(glGetUniformLocation(program, "uTextureSize"), resources.GetTextureWidth(tIndex), resources.GetTextureHeight(tIndex));
+    hzgl::SetSampler(program, "uTexture", texture, 0);
 
     if (programNames[pIndex] == "Greyscale")
     {
-        glUniform1f(glGetUniformLocation(program, "uStrength"), strength);
+        hzgl::SetFloat(program, "uStrength", 1, strength);
     }
     else if (programNames[pIndex] == "Convolution")
     {
-        glUniform1f(glGetUniformLocation(program, "uKernelWeight"), kernelWeight);
-        glUniform1fv(glGetUniformLocation(program, "uKernel"), 9, kernel.data());
+        hzgl::SetFloatv(program, "uKernel", 9, kernel.data());
+        hzgl::SetFloat(program, "uKernelWeight", 1, kernelWeight);
+        hzgl::SetFloat(program, "uTextureSize", 2, resources.GetTextureWidth(tIndex), resources.GetTextureHeight(tIndex));
     }
 
     glBindVertexArray(quadVAO);

@@ -3,7 +3,6 @@
 in  vec2 fTexCoord;
 out vec4 FragColor;
 
-uniform vec2 uTextureSize;
 uniform sampler2D uTexture;
 
 void main()

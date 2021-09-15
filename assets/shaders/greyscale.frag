@@ -4,7 +4,6 @@ in  vec2 fTexCoord;
 out vec4 FragColor;
 
 uniform float uStrength;
-uniform vec2 uTextureSize;
 uniform sampler2D uTexture;
 
 const vec3 lumWeights = vec3(0.2125, 0.7154, 0.0721);
